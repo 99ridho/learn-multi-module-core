@@ -15,6 +15,7 @@ public protocol RequestDispatcherProtocol {
 }
 
 public class RequestDispatcher<Request: RequestTypeProtocol>: RequestDispatcherProtocol {
+    public init() { }
     public func dispatch<ResponseType: Decodable>(
         request: Request,
         mapResponseTo responseType: ResponseType.Type,
